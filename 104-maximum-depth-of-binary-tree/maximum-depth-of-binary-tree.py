@@ -12,12 +12,9 @@ class Solution:
                 return depth
 
             depth += 1
-            maxDepth = depth
-            maxDepth = max(maxDepth, helper(root.left, depth))
-            maxDepth = max(maxDepth, helper(root.right, depth))
+            left = helper(root.left, depth)
+            right = helper(root.right, depth)
 
-            depth = maxDepth
-
-            return depth
+            return max(left, right)
 
         return helper(root, 0)
