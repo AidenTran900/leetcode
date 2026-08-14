@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     # Use DFS here
-    # We only need left/right most node since we do a swap
+    # At every node swap children, then recurse through children
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return None
