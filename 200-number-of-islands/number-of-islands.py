@@ -15,6 +15,8 @@ class Solution:
 
             if grid[i][j] == "0": return
 
+            # This floods the entire island -> 0 
+            # meaning we won't visit same island twice in second loop
             grid[i][j] = "0"
 
             recurse(i + 1, j) # Right
