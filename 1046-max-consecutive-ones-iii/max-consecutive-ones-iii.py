@@ -14,6 +14,5 @@ class Solution:
                     left += 1
 
             largest = max(largest, right - left + 1)
-            right += 1
         
         return largest
