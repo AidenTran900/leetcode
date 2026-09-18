@@ -45,6 +45,7 @@ class Solution:
             return []
 
         # Combine to matrix
+        # We map value -> idx so matrix knows position for each number from 1-k
         row_pos = {row_sort[i]: i for i in range(len(row_sort))}
         col_pos = {col_sort[i]: i for i in range(len(col_sort))}
 
