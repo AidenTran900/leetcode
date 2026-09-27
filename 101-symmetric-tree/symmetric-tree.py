@@ -5,7 +5,6 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    # O(n)
     def isSymmetric(self, root: TreeNode | None) -> bool:
         if root == None:
             return False
