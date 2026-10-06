@@ -1,12 +1,10 @@
 class Solution:
     def longestConsecutive(self, nums: list[int]) -> int:
-        if len(nums) == 0:
-            return 0
+        if len(nums) < 2:
+            return len(nums)
 
         # 1 sort
         nums.sort()
-
-        print(nums)
 
         # 2 sliding window
         last = nums[0]
