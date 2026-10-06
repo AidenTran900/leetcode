@@ -43,8 +43,6 @@ class Solution:
         # 2
         result = []
         visited = set()
-
-        print(adj_list)
         
         def get_dist_k(cur, dist):
             if dist == k:
