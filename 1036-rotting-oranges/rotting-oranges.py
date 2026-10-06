@@ -26,6 +26,8 @@ class Solution:
         time = 0
         while queue:
             time += 1
+
+            # whatever is in the queue right now
             for _ in range(len(queue)):
                 x, y = queue.popleft()
 
