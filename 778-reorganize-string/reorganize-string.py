@@ -4,7 +4,7 @@ import heapq
 class Solution:
     def reorganizeString(self, s: str) -> str:
         freq = Counter(s)
-        
+
         maxheap = [(-freq, char) for char, freq in freq.items()]
         heapq.heapify(maxheap)
 
@@ -18,7 +18,7 @@ class Solution:
             ret.append(char)
             print(char)
 
-            if prev_freq < 0:
+            if -prev_freq > 0:
                 heapq.heappush(maxheap, (prev_freq, prev_char))
 
             prev_freq = freq + 1 # add instead of sub since freqs are negative (max heap)
