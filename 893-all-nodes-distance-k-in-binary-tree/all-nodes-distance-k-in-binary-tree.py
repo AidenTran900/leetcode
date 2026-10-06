@@ -9,9 +9,10 @@ from collections import deque
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        # 1 turn into adjacency list O(n)
-        # 2 do a DFS starting at target O(n)
-        # Total: O(n)
+        # 1 turn into adjacency list -> O(n) time, O(n) space
+        # 2 do a DFS starting at target -> O(n) time
+        # Time: O(n)
+        # Space: O(n)
         
         # 1
         adj_list = {}
