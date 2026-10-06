@@ -18,7 +18,6 @@ class LRUCache:
             return -1
         
         self.updated(key)
-
         return self.cache[key]
 
     def put(self, key: int, value: int) -> None:
