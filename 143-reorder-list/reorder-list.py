@@ -10,24 +10,19 @@ class Solution:
         """
         # recurse thru LL
         # map ind
-
-
         ind_map = {}
 
         def recurse(i, cur):
             if not cur:
                 return 0
-            
             ind_map[i] = cur
 
             return recurse(i + 1, cur.next) + 1
         
         n = recurse(0, head)
-        # print([(i, node.val) for i, node in ind_map.items()])
         
         for left in range(0, n//2):
             right = n - left - 1
-            # print(left, right)
             
             l_node = ind_map[left]
             r_node = ind_map[right]
@@ -35,8 +30,6 @@ class Solution:
 
             if l_node == r_parent:
                 break
-
-            # print(l_node.val, r_parent.val, r_node.val)
 
             l_child = l_node.next
             r_parent.next = None
