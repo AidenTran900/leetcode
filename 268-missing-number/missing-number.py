@@ -2,7 +2,6 @@ class Solution:
     def missingNumber(self, nums: list[int]) -> int:
 
         nums.sort()
-        print(nums)
         last = -1
         
         for num in nums:
