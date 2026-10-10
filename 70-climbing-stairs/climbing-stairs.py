@@ -1,18 +1,13 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        cache = {}
+        # bottom up approach (top of stairs and accumulating downwards)
 
-        def solve(step):
-            if step > n:
-                return 0
+        one = 1
+        two = 1
 
-            if step in cache:
-                return cache[step]
+        for i in range(n - 1):
+            temp = one
+            one = one + two
+            two = temp
 
-            if step == n:
-                return 1
-
-            cache[step] = solve(step + 1) + solve(step+2)
-            return cache[step]
-
-        return solve(0)
+        return one
