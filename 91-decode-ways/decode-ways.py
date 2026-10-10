@@ -16,11 +16,11 @@ class Solution:
 
         n = len(s)
 
-        nxt = 1
-        nxt2 = 0
+        nxt = 1 # ways to decode after cur digit
+        nxt2 = 0 # ways to decide after cur pair
 
         for i in range(n-1, -1, -1):
-            # if the next digit is 0 then the dd case is impossible
+            # if the next digit is 0 then 1 digit impossible
             cur = nxt if s[i] != '0' else 0
 
             if (i < n-1) and (s[i] == '1' or s[i] == '2' and s[i+1] < '7'):
