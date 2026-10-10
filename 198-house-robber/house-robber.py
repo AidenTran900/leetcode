@@ -4,12 +4,12 @@ class Solution:
             # you rob the house (if i>last+1)
             # you skip the house
 
-        prev0 = 0
-        prev1 = 0
+        best_prev = 0 # total up to previous house
+        best_prev2 = 0 # total up to 2 houses back
 
         for num in nums:
-            temp = prev0
-            prev0 = max(prev1 + num, prev0)
-            prev1 = temp
+            temp = best_prev
+            best_prev = max(best_prev2 + num, best_prev)
+            best_prev2 = temp
 
-        return prev0
+        return best_prev
