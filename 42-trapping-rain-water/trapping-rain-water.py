@@ -10,7 +10,7 @@ class Solution:
 
         left[0] = height[0]
         right[n-1] = height[n-1]
-        
+
         for i in range(1, n):
             left[i] = max(left[i-1], height[i])
 
@@ -20,4 +20,5 @@ class Solution:
         total = 0
         for i in range(n):
             total += min(left[i], right[i]) - height[i]
+            
         return total
