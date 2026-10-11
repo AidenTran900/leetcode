@@ -31,6 +31,8 @@ class Solution:
         # return max(cache)
 
     # TWO VARIABLES O(N) time, O(1) space
+        # we know that we can overwrite cache[i+1] with cache[i]. This means we can store as a single variable, cur
+        # since we do not store entire cache, we cannot do max(cache). In this case, we have to keep another variable that stores the best so far
 
         cur = nums[n-1]
         best = cur
