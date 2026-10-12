@@ -28,7 +28,7 @@ class Solution:
                 
             # return solve(0)
         
-        # memoized
+        # DP
             # start from the goal
             # next index, set to new goal if reachable
             # repeat
